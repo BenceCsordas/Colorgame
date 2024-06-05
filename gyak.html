@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gyakorlás</title>
+</head>
+<style>
+    div {
+        transition: 1s;
+    }
+    .kulso{
+        background-color: lightcoral;
+        padding: 100px;    
+    }
+    .kozepso{
+        background-color: #fff;
+        padding: 100px;
+
+    }
+    .belso{
+        background-color: orangered;
+        padding: 100px;
+    }
+
+</style>
+<body>
+    <div class="kulso" onclick="handleClick(event)">
+        <div class="kozepso">
+            <div class="belso">
+
+            </div>
+        </div>
+    </div>
+
+    <script>
+        function handleClick(event) {
+            console.log(event.target)
+            event.target.style.backgroundColor = "black"
+        }
+    </script>
+</body>
+</html>

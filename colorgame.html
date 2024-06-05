@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <style>
+        div {
+           border: 1px solid black;
+           padding: 50px;
+        }
+    </style>
+    <div class="egy" onclick="handleClick(event)">
+        <div class="ketto">
+            <div class="harom">
+                <div class="negy">
+                    <div class="ot"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script>
+        
+        function getRandomInt(max) {
+            return Math.floor(Math.random() * max);
+        }
+        function randomColor() {
+            const letters = "0123456789ABCDEF"
+            let color = "#"
+            for(let i = 0; i <= 5; i++) {
+                let index = getRandomInt(letters.length)
+                color += letters[index]
+                
+            }
+            return color;
+        }
+        //document.querySelector(".container").style.backgroundColor = randomColor()
+        console.log(randomColor())
+        function handleClick(event) {
+            console.log(event.target.className)
+            document.querySelector("." + event.target.className).style.backgroundColor = randomColor()
+        }
+    </script>
+</body>
+</html>
